@@ -76,10 +76,10 @@ export default createGlobalStyle`
     button {
         cursor: pointer;
         transition: 0.5s;
-    }
 
-    h1 {
-        font: var(--body-1-400);
+        &:hover {
+            transition: 0.5s;
+        }
     }
 
     a {
