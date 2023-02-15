@@ -3,9 +3,11 @@ import Head from "next/head";
 import Image from "next/image";
 import Button from "../src/components/Button";
 
+
 const Home: NextPage = () => {
+
   return (
-    <div>
+    <div style={{ display: "flex" }}>
       <Head>
         <title>Motors Shop</title>
         <meta
