@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { DefaultCard } from "../DefaultCard/styles";
 
 export const ProductCardContainer = styled.div`
     display: flex;
@@ -6,7 +7,7 @@ export const ProductCardContainer = styled.div`
     width: 350px;
 `
 
-export const ProductCardContent = styled.div`
+export const ProductCardContent = styled(DefaultCard)`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -23,19 +24,24 @@ export const ProductCardContent = styled.div`
         overflow: hidden;
     }
 
-    h2 {
+    .product_image_container {
+        border: 2px solid var(--whiteFixed);
+    }
+
+    .product_image_container:hover {
+        border: 2px solid var(--brand2);
+    }
+
+    .product_title {
         font: var(--Heading-7-600);
         color: var(--grey1);
         margin-bottom: 16px;
     }
 
-    h3 {
+    .product_description {
         font: var(--body-2-400);
         color: var(--grey2);
         margin-bottom: 16px;
-    }
-
-    .product_description {
         max-height: 50px;
         max-width: 100%;
     }
@@ -45,17 +51,8 @@ export const ProductCardContent = styled.div`
         height: auto;
     }
 
-    .product_advertiser {
-        display: flex;
-        align-items: center;
-        margin-bottom: 16px;
-    }
-
     .advertiser_figure {
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
-        overflow: hidden;
+        margin: 0;
     }
 
     .advertiser_profile {
@@ -64,13 +61,11 @@ export const ProductCardContent = styled.div`
     }
 
     .advertiser_name {
-        font: var(--body-2-500);
         color: var(--grey2);
-        margin-left: 8px;
     }
 
     .product_down_info {
-        display: flex;
+        flex-direction: row;
         align-items: center;
         width: 100%;
         justify-content: space-between;
@@ -80,17 +75,7 @@ export const ProductCardContent = styled.div`
         display: flex;
     }
 
-    .product_button {
-        padding: 4px 8px;
-        border-radius: 4px;
-        background-color: var(--brand4);
-        font: var(--body-2-500);
-        color: var(--brand1);
-        margin-right: 12px;
-    }
-
     .product_value {
-        font: var(--Heading-7-500);
         color: var(--grey1);
     }
 `

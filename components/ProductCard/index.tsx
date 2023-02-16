@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { ProductCardContainer, ProductCardContent } from "./styles"
 
-interface IProduct {
+export interface IProduct {
     title: string
     description: string
     imageUrl: string
@@ -12,7 +12,7 @@ interface IProduct {
     value: string
 }
 
-interface IProductCardProps {
+export interface IProductCardProps {
     product: IProduct
 }
 
@@ -29,7 +29,7 @@ const ProductCard = ({ product }: IProductCardProps) => {
         <ProductCardContainer>
             <ProductCardContent>
                 <div className="product_upper_info">
-                    <figure>
+                    <figure className="product_image_container">
                         <Image className="product_image" src={product.imageUrl} width={350} height={200} alt="car" />
                     </figure>
                     <h2 className="product_title">{format(product.title, 35)}</h2>
