@@ -7,9 +7,9 @@ import { StyledModal } from "./style";
 interface IModal {
   children: ReactNode;
   titleModal: string;
-  isDoubleButton: boolean;
+  isDoubleButton?: boolean;
   contentButtonOne: string;
-  contentButtonTwo: string;
+  contentButtonTwo?: string;
   setModalIsOpen: (data: boolean) => void;
 }
 
@@ -21,6 +21,8 @@ const Modal = ({
   contentButtonTwo,
   setModalIsOpen,
 }: IModal) => {
+  
+
   const closeModal = () => {
     setModalIsOpen(false);
   };
