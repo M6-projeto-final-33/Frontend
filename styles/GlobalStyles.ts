@@ -89,4 +89,8 @@ export default createGlobalStyle`
     ul {
         list-style: none;
     }
+
+    main {
+        margin-top: 90px;
+    }
 `;
