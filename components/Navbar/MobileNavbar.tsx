@@ -1,24 +1,22 @@
 import Image from "next/image";
 import Logo from "../../assets/logo.svg";
 import { DropDownMenu, StyledMobileNav, StyledNav } from "./style";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Button from "../Button";
-import { UserContext } from "../../contexts/UserContext";
 import UserIcon from "../UserIcon";
 import MenuButton from "../MenuButton";
+import { INavbar } from ".";
 
-const MobileNavbar = () => {
+const MobileNavbar = ({ isAuthenticated }: INavbar) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  const { isAuthenticated } = useContext(UserContext);
-
   const variants = {
     opened: {
-      top: 0,
+      top: -10,
       transition: {
         when: "beforeChildren",
         staggerChildren: 0.5,
