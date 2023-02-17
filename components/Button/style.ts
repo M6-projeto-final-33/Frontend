@@ -1,6 +1,8 @@
 import styled, { css } from "styled-components";
 
 interface IStyledButton {
+  width_mobile?: string;
+  width_desktop?: string;
   colorStyle?:
     | "grey-0__white-fixed"
     | "grey-1__white-fixed"
@@ -38,18 +40,22 @@ const StyledButton = styled.button<IStyledButton>`
   padding: 12px 20px;
   gap: 10px;
 
-  width: 119px;
+  width: ${(props) => props.width_mobile || "119px"};
   height: 38px;
 
   border-radius: 4px;
 
+  margin: 8px 0px 8px 8px;
+
   font: var(--button-medium-text);
 
   @media (min-width: 768px) {
-    width: 146px;
+    width: ${(props) => props.width_desktop || "146px"};
     height: 48px;
 
     padding: 12px 28px;
+
+    margin: 12px 0px 12px 12px;
 
     font: var(--button-big-text);
   }

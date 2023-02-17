@@ -1,9 +1,13 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Navbar from "../components/Navbar";
+import Button from "../components/Button";
+
+
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <>
       <Head>
         <title>Motors Shop</title>
         <meta
@@ -12,8 +16,14 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>Motors Shop</h1>
-    </div>
+      <Navbar />
+      <main>
+        <Button>button</Button>
+        <Button>button</Button>
+        <Button>button</Button>
+        <Button>button</Button>
+      </main>
+    </>
   );
 };
 
