@@ -4,10 +4,12 @@ import Provider from "../contexts";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Provider>
-      <GlobalStyles />
-      <Component {...pageProps} />
-    </Provider>
+    <>
+      <Provider>
+        <GlobalStyles />
+        <Component {...pageProps} />
+      </Provider>
+    </>
   );
 }
 

@@ -16,7 +16,6 @@ interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
     | "brand-4__brand-1"
     | "grey-10__grey-1"
     | "transparent__grey-10"
-    | "grey-10__grey-1"
     | "transparent__grey-0"
     | "grey-1__grey-10"
     | "grey-4__grey-0"

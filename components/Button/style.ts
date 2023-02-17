@@ -14,7 +14,6 @@ interface IStyledButton {
     | "brand-4__brand-1"
     | "grey-10__grey-1"
     | "transparent__grey-10"
-    | "grey-10__grey-1"
     | "grey-1__grey-10"
     | "grey-4__grey-0"
     | "grey-1__grey-10"
@@ -161,17 +160,6 @@ const StyledButton = styled.button<IStyledButton>`
           background: none;
           border: none;
           color: var(--grey10);
-
-          &:hover {
-            background: var(--grey7);
-            border: 1.5px solid var(--grey7);
-          }
-        `;
-      case "grey-10__grey-1":
-        return css`
-          background: var(--grey10);
-          border: 1.5px solid var(--grey10);
-          color: var(--grey1);
 
           &:hover {
             background: var(--grey7);
