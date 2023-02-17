@@ -1,11 +1,11 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
+import Navbar from "../components/Navbar";
 import Button from "../components/Button";
 
 const Home: NextPage = () => {
   return (
-    <div style={{ display: "flex" }}>
+    <>
       <Head>
         <title>Motors Shop</title>
         <meta
@@ -14,9 +14,14 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>Motors Shop</h1>
-      <Button>button</Button>
-    </div>
+      <Navbar />
+      <main>
+        <Button>button</Button>
+        <Button>button</Button>
+        <Button>button</Button>
+        <Button>button</Button>
+      </main>
+    </>
   );
 };
 
