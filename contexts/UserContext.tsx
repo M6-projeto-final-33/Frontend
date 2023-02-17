@@ -12,9 +12,9 @@ interface IUserContext {
 
 export const UserContext = createContext<IUserContext>({} as IUserContext);
 
-export const UserProvider = ({ children }: ContextsProps) => {
+const UserProvider = ({ children }: ContextsProps) => {
   const [isAuthenticated, setIsAuthenticated] = useState(true);
-
+  console.log(isAuthenticated);
   const [user, setUser] = useState<IUser>();
 
   return (
@@ -25,3 +25,5 @@ export const UserProvider = ({ children }: ContextsProps) => {
     </UserContext.Provider>
   );
 };
+
+export default UserProvider;
