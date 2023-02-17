@@ -3,6 +3,8 @@ import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Button from "../components/Button";
 
+
+
 const Home: NextPage = () => {
   return (
     <>
