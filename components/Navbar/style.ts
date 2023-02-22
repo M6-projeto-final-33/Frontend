@@ -15,6 +15,72 @@ export const StyledNav = styled.div`
   }
 `;
 
+export const StyledDesktopNav = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0px 50px 0px 50px;
+
+  width: 100vw;
+  height: 80px;
+
+  background: var(--grey10);
+  border-bottom: 2px solid var(--grey6);
+
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .pages {
+    display: flex;
+    flex-direction: row;
+    padding-right: 50px;
+    a {
+      font: var(--body-1-600);
+      color: var(--grey2);
+      transition: 0.5s;
+
+      &:hover {
+        color: var(--grey4);
+        transition: 0.5s;
+      }
+    }
+
+    a + a {
+      padding-left: 25px;
+    }
+  }
+
+  .login-signin {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    border-left: 2px solid var(--grey6);
+    padding-left: 35px;
+
+    a {
+      font: var(--body-1-600);
+      color: var(--grey2);
+      transition: 0.5s;
+
+      &:hover {
+        color: var(--grey6);
+        transition: 0.5s;
+      }
+    }
+
+    button {
+      margin-left: 45px;
+    }
+  }
+`;
+
 export const StyledMobileNav = styled.nav`
   display: flex;
   justify-content: space-between;
@@ -33,8 +99,6 @@ export const StyledMobileNav = styled.nav`
 export const DropDownMenu = styled.div`
   display: flex;
   flex-direction: row;
-
-  width: 100vw;
 
   > ul {
     position: fixed;
