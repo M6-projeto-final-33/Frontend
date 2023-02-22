@@ -3,9 +3,10 @@ import Head from "next/head";
 import Image from "next/image";
 import { useForm } from "react-hook-form";
 import Button from "../components/Button";
-import Input from "../components/Input";
 import ProductCard from "../components/ProductCard";
 import ProductCardAuction from "../components/ProductCardAuction";
+import Navbar from "../components/Navbar";
+import Button from "../components/Button";
 
 export interface ISubmitData {
   email: string;
@@ -20,7 +21,7 @@ const Home: NextPage = () => {
   };
 
   return (
-    <div>
+    <>
       <Head>
         <title>Motors Shop</title>
         <meta
@@ -29,16 +30,14 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <Input
-          size={"big"}
-          labelFor={"Email"}
-          placeholder={"Email"}
-          type={"text"}
-          register={register}
-        />
-      </form>
-    </div>
+      <Navbar />
+      <main>
+        <Button>button</Button>
+        <Button>button</Button>
+        <Button>button</Button>
+        <Button>button</Button>
+      </main>
+    </>
   );
 };
 
