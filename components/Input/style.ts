@@ -7,14 +7,16 @@ interface IProps {
 
 export const Label = styled.label<IProps>`
   width: 90%;
-
   margin: 0 auto;
+
+  font: var(--input-label);
+  color: var(--grey1);
 
   input {
     width: 100%;
     height: 100%;
 
-    margin-top: 3px;
+    margin-top: 8px;
     margin-left: 1px;
     padding: 0px 16px;
 
@@ -22,11 +24,11 @@ export const Label = styled.label<IProps>`
     border-radius: 4px;
 
     min-height: ${({ size }) =>
-      size === "small"
-        ? `
-       45px 
+    size === "small"
+      ? `
+       45px
        `
-        : `
+      : `
        90px
        `};
 
