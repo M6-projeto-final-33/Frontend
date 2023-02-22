@@ -56,10 +56,19 @@ export const StyledDesktopNav = styled.div`
     }
   }
 
+  .user {
+    display: flex;
+    align-items: center;
+
+    border-left: 2px solid var(--grey6);
+    padding-left: 35px;
+  }
+
   .login-signin {
     display: flex;
-    flex-direction: row;
     align-items: center;
+
+    height: 40px;
 
     border-left: 2px solid var(--grey6);
     padding-left: 35px;

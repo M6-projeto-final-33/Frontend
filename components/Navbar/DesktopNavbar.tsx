@@ -21,16 +21,16 @@ const DesktopNavbar = ({ isAuthenticated }: INavbar) => {
             <Link href="/leilao">Leilão</Link>
           </div>
           {isAuthenticated ? (
-            <DropDownMenu>
-              <UserIcon />
-            </DropDownMenu>
+            <div className="user">
+              <DropDownMenu>
+                <UserIcon />
+              </DropDownMenu>
+            </div>
           ) : (
             <div className="login-signin">
               <Link href="/login">Fazer login</Link>
               <Link href="/sign-in">
-                <Button width_mobile="90%" colorStyle="grey-4__grey-0">
-                  Cadastrar
-                </Button>
+                <Button colorStyle="grey-4__grey-0">Cadastrar</Button>
               </Link>
             </div>
           )}
