@@ -7,7 +7,18 @@ import Input from "../components/Input";
 import ProductCard from "../components/ProductCard";
 import ProductCardAuction from "../components/ProductCardAuction";
 
+export interface ISubmitData {
+  email: string;
+  password: string;
+}
+
 const Home: NextPage = () => {
+  const { register, handleSubmit } = useForm<ISubmitData>({});
+
+  const onSubmit = (data: any) => {
+    console.log(data);
+  };
+
   return (
     <div>
       <Head>
@@ -18,7 +29,15 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>wello world</h1>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <Input
+          size={"big"}
+          labelFor={"Email"}
+          placeholder={"Email"}
+          type={"text"}
+          register={register}
+        />
+      </form>
     </div>
   );
 };
