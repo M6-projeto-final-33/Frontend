@@ -1,10 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import { useForm } from "react-hook-form";
-import Button from "../components/Button";
-import ProductCard from "../components/ProductCard";
-import ProductCardAuction from "../components/ProductCardAuction";
 import Navbar from "../components/Navbar";
 import Button from "../components/Button";
 
