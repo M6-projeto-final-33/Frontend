@@ -14,7 +14,7 @@ export const UserContext = createContext<IUserContext>({} as IUserContext);
 
 const UserProvider = ({ children }: ContextsProps) => {
   const [isAuthenticated, setIsAuthenticated] = useState(true);
-  console.log(isAuthenticated);
+
   const [user, setUser] = useState<IUser>();
 
   return (
