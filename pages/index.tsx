@@ -1,21 +1,12 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { useForm } from "react-hook-form";
-import Navbar from "../components/Navbar";
+import { useContext } from "react";
 import Button from "../components/Button";
 
-export interface ISubmitData {
-  email: string;
-  password: string;
-}
+import Navbar from "../components/Navbar";
+import { ModalContext } from "../contexts/ModalContext";
 
 const Home: NextPage = () => {
-  const { register, handleSubmit } = useForm<ISubmitData>({});
-
-  const onSubmit = (data: any) => {
-    console.log(data);
-  };
-
   return (
     <>
       <Head>
@@ -27,12 +18,6 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <main>
-        <Button>button</Button>
-        <Button>button</Button>
-        <Button>button</Button>
-        <Button>button</Button>
-      </main>
     </>
   );
 };
