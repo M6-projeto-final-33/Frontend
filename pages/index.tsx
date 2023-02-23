@@ -5,19 +5,9 @@ import Navbar from "../components/Navbar";
 import Button from "../components/Button";
 import CaroulselListing from "../components/CarouselListing";
 import { advertisements } from "../database";
-
-export interface ISubmitData {
-  email: string;
-  password: string;
-}
+import CreateAnnouncement from "../components/CreateAnnouncement";
 
 const Home: NextPage = () => {
-  const { register, handleSubmit } = useForm<ISubmitData>({});
-
-  const onSubmit = (data: any) => {
-    console.log(data);
-  };
-
   return (
     <>
       <Head>
@@ -28,6 +18,7 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <Navbar />
       <main>
         <CaroulselListing title="Carros" adList={advertisements} />

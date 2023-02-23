@@ -1,34 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Sobre o projeto
+O projeto é um E-Commerce de veículos que oferece aos usuários a opção de compra, venda ou leilão de carros e motos. Os usuários podem se registrar como vendedores ou compradores, e podem editar seus dados de perfil caso queiram.
+Os compradores podem visualizar e comprar veículos de vendedores, bem como comentar, dar lances em leilões, e compartilhar o link de algum vendedor em especifico, mostrando assim todos os seus anúncios.
+Os vendedores têm a opção de anunciar ou leiloar seus veículos para os compradores, cada anúncio contém informações de quilometragem, valor, ano e descrição do veículo anunciado. Vendedores podem também editar e ver todos os seus anúncios além de ver lances e comentários em seus respectivos anúncios.
+<a href="https://github.com/M6-projeto-final-33/backend">Back-End</a> do projeto.
 
-## Getting Started
 
-First, run the development server:
+# Como instalar e rodar a aplicação
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+1- Clone o repositório em sua máquina
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2- Instale todas as dependências necessárias usando o comando `yarn` ou `yarn install`
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+3- Por fim use o comando `yarn dev` para poder rodar a aplicação em local-host
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+OBS: Não esqueceça que precisa estar rodando a API da aplicação que está no <a href="https://github.com/M6-projeto-final-33/backend">Back-End</a> para o site funcionar de forma correta.
+Caso altere a porta onde a API está funcionando vai precisa trocar tambémm a porta no arquivo `api.ts` dessa aplicação que está no caminho `src > services > api.ts`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
+# Tecnologias usadas no projeto
 
-To learn more about Next.js, take a look at the following resources:
+#### Linguagens
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- JAVASCRIPT
+- TYPESCRIPT
+- CSS
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+#### Framework
 
-## Deploy on Vercel
+- NEXT
+- REACT
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#### Bibliotecas
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- AXIOS
+- ESLINT
+- FRAMER-MOTION
+- REACT-HOOK-FORM
+- STYLED-COMPONENTS
