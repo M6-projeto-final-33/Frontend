@@ -76,10 +76,6 @@ export const DefaultFormContent = styled.form`
         cursor: pointer;
     }
 
-    .option:checked {
-        background-color: black;
-    }
-
     .option_selected {
         background-color: var(--brand1);
         border: none;
@@ -95,10 +91,6 @@ export const DefaultFormContent = styled.form`
         margin-bottom: 24px;
     }
 
-    .input_box_type1 {
-
-    }
-
     .input_box_type2 {
         display: flex;
         width: 100%;
@@ -107,6 +99,47 @@ export const DefaultFormContent = styled.form`
 
     .input_type2 {
         width: 48%;
+    }
+
+    .description_area {
+        width: 100%;
+        margin-bottom: 24px;
+
+        font: var(--input-label);
+        color: var(--grey1);
+
+        textarea {
+            width: 100%;
+            max-width: 100%;
+            min-width: 100%;
+            height: 80px;
+
+            margin-top: 8px;
+            padding: 10px 16px;
+
+            border: 1.5px solid #e9ecef;
+            border-radius: 4px;
+
+            font: var(--input-placeholder);
+            color: var(--grey1);
+
+            min-height: 45px;
+
+            :focus {
+            outline: none !important;
+            border: 1px solid #5126ea;
+            }
+
+            :hover {
+            transition: 0.5s all ease-in-out;
+            background: #f1f3f5;
+            }
+
+            ::placeholder {
+            font: var(--input-placeholder);
+            color: var(--grey3);
+            }
+        }
     }
 
     .add_image_button {
@@ -119,6 +152,10 @@ export const DefaultFormContent = styled.form`
         border-radius: 4px;
         color: var(--brand1);
         font: var(--button-medium-text);
+
+        @media (min-width: 580px) {
+            max-width: 315px;
+        }
     }
 
     .bottom_buttons {
@@ -126,10 +163,18 @@ export const DefaultFormContent = styled.form`
         width: 100%;
         justify-content: space-between;
         margin: 20px 0;
+
+        @media (min-width: 580px) {
+            margin-top: 50px;
+            justify-content: end;
+        }
     }
 
     .bottom_button {
         margin: 0;
         height: 48px;
+        @media (min-width: 580px) {
+            margin-left: 15px;
+        }
     }
 `

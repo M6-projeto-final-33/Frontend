@@ -20,6 +20,9 @@ export const Label = styled.label<IProps>`
     border: 1.5px solid #e9ecef;
     border-radius: 4px;
 
+    font: var(--input-placeholder);
+    color: var(--grey1);
+
     min-height: ${({ size }) =>
     size === "small"
       ? `

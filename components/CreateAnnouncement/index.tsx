@@ -7,6 +7,8 @@ import { DefaultFormBackground, DefaultFormContainer, DefaultFormContent } from 
 import Input from '../Input'
 import { useState } from 'react'
 import Button from '../Button'
+import Options from '../Options'
+import api from '../../services/api'
 
 export interface IRequest {
     typeAd: string
@@ -39,7 +41,7 @@ const CreateAnnouncement = () => {
         title: yup.string().required("Título obrigatório"),
         year: yup.string().required("Ano obrigatório"),
         mileage: yup.string().required("Kilometragem obrigatória"),
-        price: yup.string().required("Preço obrigatório"),
+        price: yup.number().required("Preço obrigatório"),
         description: yup.string().required("Descrição obrigatória"),
         vehicleType: yup.string().required("Tipo do veículo obrigatório"),
         coverImg: yup.string().required("Url da imagem obrigatória"),
@@ -51,6 +53,12 @@ const CreateAnnouncement = () => {
 
     const onSubmitFunction = (data: FieldValues) => {
         console.log(data)
+        data.userId = "df03d8cc-9419-4a7e-a9ab-bac45ab3ffdf";
+
+        api.post("/announcements/", data)
+            .then((res) => {
+                console.log(res.data)
+            })
     }
 
     return (
@@ -65,28 +73,20 @@ const CreateAnnouncement = () => {
 
                     <div className="input_box ib_0">
                         <h2 className="input_title">Tipo de anuncio</h2>
-                        <div className="options_container">
-                            <label className="option option_selected" htmlFor="venda">
-                                Venda
-                                <input
-                                    id="venda"
-                                    type="radio"
-                                    name="type_ad"
-                                    value="sale"
-                                    {...register?.("typeAd")}
-                                />
-                            </label>
-                            <label className="option" htmlFor="leilao">
-                                Leilão
-                                <input
-                                    id="leilao"
-                                    type="radio"
-                                    name="type_ad"
-                                    value="auction"
-                                    {...register?.("typeAd")}
-                                />
-                            </label>
-                        </div>
+                        <Options
+                            options={[
+                                {
+                                    htmlFor: "Venda",
+                                    fieldValue: "sale"
+                                },
+                                {
+                                    htmlFor: "Leilão",
+                                    fieldValue: "auction"
+                                },
+                            ]}
+                            fieldName="typeAd"
+                            register={register}
+                        />
                     </div>
                     <span>{errors.typeAd?.message}</span>
 
@@ -136,42 +136,32 @@ const CreateAnnouncement = () => {
                         />
                         <span>{errors.price?.message}</span>
                     </div>
-
-                    <Input
-                        className="big_text"
-                        size="big"
-                        labelFor="Descrição"
-                        fieldName="description"
-                        type="input"
-                        placeholder="Digitar descrição"
-                        register={register}
-                    />
+                    <label htmlFor="Descrição" className="description_area">
+                        Descrição
+                        <textarea
+                            id="description"
+                            placeholder="Digitar descrição"
+                            {...register("description")}
+                        ></textarea>
+                    </label>
                     <span>{errors.description?.message}</span>
 
                     <div className="input_box ib_0">
                         <h2 className="input_title">Tipo de veículo</h2>
-                        <div className="options_container">
-                            <label className="option option_selected" htmlFor="car">
-                                Carro
-                                <input
-                                    id="car"
-                                    type="radio"
-                                    name="type_ad"
-                                    value="car"
-                                    {...register?.("vehicleType")}
-                                />
-                            </label>
-                            <label className="option" htmlFor="moto">
-                                Moto
-                                <input
-                                    id="moto"
-                                    type="radio"
-                                    name="type_ad"
-                                    value="motocycle"
-                                    {...register?.("vehicleType")}
-                                />
-                            </label>
-                        </div>
+                        <Options
+                            options={[
+                                {
+                                    htmlFor: "Carro",
+                                    fieldValue: "car"
+                                },
+                                {
+                                    htmlFor: "Moto",
+                                    fieldValue: "motorbike"
+                                },
+                            ]}
+                            fieldName="vehicleType"
+                            register={register}
+                        />
                     </div>
                     <span>{errors.vehicleType?.message}</span>
 
