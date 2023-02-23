@@ -5,17 +5,23 @@ import { UseFormRegister } from "react-hook-form";
 interface IProps extends LabelHTMLAttributes<HTMLLabelElement> {
   size: "small" | "big";
   labelFor: string;
+  fieldName: string;
   type: string;
   placeholder: string;
+  index?: number;
+  handleChange?: (index: number, url: string) => void;
   register?: UseFormRegister<any>;
 }
 
 const Input = ({
   size,
   labelFor,
+  fieldName,
   type,
   placeholder,
   register,
+  index,
+  handleChange,
   ...rest
 }: IProps): JSX.Element => {
   return (
@@ -23,9 +29,14 @@ const Input = ({
       {labelFor}
       <input
         type={type}
-        id={labelFor}
+        id={fieldName}
         placeholder={placeholder}
-        {...register!(labelFor!)}
+        {...register?.(fieldName!)}
+        onChange={(event) => {
+          if (index) {
+            handleChange(index, event.target.value)
+          }
+        }}
       />
     </Label>
   );

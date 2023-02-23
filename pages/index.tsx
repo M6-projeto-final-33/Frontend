@@ -3,6 +3,7 @@ import Head from "next/head";
 import { useForm } from "react-hook-form";
 import Navbar from "../components/Navbar";
 import Button from "../components/Button";
+import CreateAnnouncement from "../components/CreateAnnouncement";
 
 
 const Home: NextPage = () => {
@@ -16,7 +17,7 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
- </>
+    </>
   );
 };
 
