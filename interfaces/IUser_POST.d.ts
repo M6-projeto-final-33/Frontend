@@ -6,7 +6,7 @@ export interface IUser_POST {
   contact: string;
   birthDate?: Date;
   description?: string;
-  userType: string;
+  userType: "buyer" | "advertiser";
   address: IAddress_POST;
 }
 
