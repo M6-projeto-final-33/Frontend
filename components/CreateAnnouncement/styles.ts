@@ -6,7 +6,7 @@ export const DefaultFormBackground = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     padding: 15px;
     background-color: rgb(0,0,0, 0.5);
     top: 0;
@@ -22,10 +22,15 @@ export const DefaultFormContainer = styled.div`
     background-color: var(--whiteFixed);
 `
 
-export const DefaultFormContent = styled.div`
+export const DefaultFormContent = styled.form`
     display: flex;
     width: 100%;
     flex-direction: column;
+
+    span {
+        font: var(--body-2-500);
+        color: var(--alert1);
+    }
 
     .top_container {
         display: flex;
@@ -68,6 +73,11 @@ export const DefaultFormContent = styled.div`
         border: 1px solid var(--grey4);
         border-radius: 4px;
         input { display: none; }
+        cursor: pointer;
+    }
+
+    .option:checked {
+        background-color: black;
     }
 
     .option_selected {
@@ -79,5 +89,47 @@ export const DefaultFormContent = styled.div`
     .vehicle_info {
         font: var(--body-2-500);
         margin: 20px 0;
+    }
+
+    .input_box {
+        margin-bottom: 24px;
+    }
+
+    .input_box_type1 {
+
+    }
+
+    .input_box_type2 {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .input_type2 {
+        width: 48%;
+    }
+
+    .add_image_button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        background-color: var(--brand4);
+        border: none;
+        border-radius: 4px;
+        color: var(--brand1);
+        font: var(--button-medium-text);
+    }
+
+    .bottom_buttons {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin: 20px 0;
+    }
+
+    .bottom_button {
+        margin: 0;
+        height: 48px;
     }
 `
