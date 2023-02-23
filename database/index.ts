@@ -27,13 +27,12 @@ export const advertisements: IAd[] = [
   {
     title: "TOYOTA Corolla Cross 2.0l xei cvt",
     id: "e65a9b1f-09f4-4c25-a483-f2d0ab131434",
-    mileage: "10.000km",
+    mileage: "10.000",
     price: 190000,
     typeAd: "sale",
     vehicleType: "car",
     year: "2023",
-    description:
-      "Corolla Cross completo semi-novo, excelente estado! Apenas 10.000km rodados",
+    description: "Corolla Cross completo semi-novo!",
     coverImg:
       "https://garagem360.com.br/wp-content/uploads/2021/09/10.-Toyota-Corolla-Cross-Hybrid-2022-2-1.jpg",
     createdAt: new Date(),
@@ -43,7 +42,7 @@ export const advertisements: IAd[] = [
   {
     title: "HONDA Civic sedan touring 1.5 turbo 16V AUT.4P",
     id: "19c127c6-b3ad-11ed-afa1-0242ac120002",
-    mileage: "20.000km",
+    mileage: "20.000",
     price: 124900,
     typeAd: "sale",
     vehicleType: "car",
@@ -58,7 +57,7 @@ export const advertisements: IAd[] = [
   {
     title: "FORD EcoSport FreeStyle 1.6 16V Flex 5p",
     id: "22698350-b3ad-11ed-afa1-0242ac120002",
-    mileage: "80.000km",
+    mileage: "80.000",
     price: 67900,
     typeAd: "sale",
     vehicleType: "car",
@@ -72,7 +71,7 @@ export const advertisements: IAd[] = [
   {
     title: "FORD EcoSport FreeStyle 1.6 16V Flex 5p",
     id: "a039e982-b3ad-11ed-afa1-0242ac12000",
-    mileage: "80.000km",
+    mileage: "80.000",
     price: 67900,
     typeAd: "sale",
     vehicleType: "car",
@@ -86,13 +85,12 @@ export const advertisements: IAd[] = [
   {
     title: "TOYOTA Corolla Cross 2.0l xei cvt",
     id: "a7471588-b3ad-11ed-afa1-0242ac120002",
-    mileage: "10.000km",
+    mileage: "10.000",
     price: 190000,
     typeAd: "sale",
     vehicleType: "car",
     year: "2023",
-    description:
-      "Corolla Cross completo semi-novo, excelente estado! Apenas 10.000km rodados",
+    description: "Corolla Cross completo semi-novo!",
     coverImg:
       "https://garagem360.com.br/wp-content/uploads/2021/09/10.-Toyota-Corolla-Cross-Hybrid-2022-2-1.jpg",
     createdAt: new Date(),
@@ -102,7 +100,7 @@ export const advertisements: IAd[] = [
   {
     title: "HONDA Civic sedan touring 1.5 turbo 16V AUT.4P",
     id: "add51e40-b3ad-11ed-afa1-0242ac120002",
-    mileage: "20.000km",
+    mileage: "20.000",
     price: 124900,
     typeAd: "sale",
     vehicleType: "car",
@@ -117,7 +115,7 @@ export const advertisements: IAd[] = [
   {
     title: "FORD EcoSport FreeStyle 1.6 16V Flex 5p",
     id: "b4b37996-b3ad-11ed-afa1-0242ac120002",
-    mileage: "80.000km",
+    mileage: "80.000",
     price: 67900,
     typeAd: "sale",
     vehicleType: "car",
