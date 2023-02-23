@@ -1,6 +1,7 @@
 export interface IUser_POST {
   name: string;
   email: string;
+  password: string;
   userImage?: string;
   cpf: string;
   contact: string;
