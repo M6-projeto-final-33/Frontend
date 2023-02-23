@@ -23,7 +23,7 @@ const DesktopNavbar = ({ isAuthenticated }: INavbar) => {
           {isAuthenticated ? (
             <div className="user">
               <DropDownMenu>
-                <UserIcon />
+                <UserIcon isNav />
               </DropDownMenu>
             </div>
           ) : (
