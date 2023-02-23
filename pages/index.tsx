@@ -3,6 +3,8 @@ import Head from "next/head";
 import { useForm } from "react-hook-form";
 import Navbar from "../components/Navbar";
 import Button from "../components/Button";
+import CaroulselListing from "../components/CarouselListing";
+import { advertisements } from "../database";
 
 export interface ISubmitData {
   email: string;
@@ -28,10 +30,7 @@ const Home: NextPage = () => {
       </Head>
       <Navbar />
       <main>
-        <Button>button</Button>
-        <Button>button</Button>
-        <Button>button</Button>
-        <Button>button</Button>
+        <CaroulselListing title="Carros" adList={advertisements} />
       </main>
     </>
   );
