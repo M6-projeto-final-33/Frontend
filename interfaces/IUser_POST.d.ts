@@ -1,12 +1,13 @@
 export interface IUser_POST {
   name: string;
   email: string;
+  password: string;
   userImage?: string;
   cpf: string;
   contact: string;
   birthDate?: Date;
   description?: string;
-  userType: string;
+  userType: "buyer" | "advertiser";
   address: IAddress_POST;
 }
 
