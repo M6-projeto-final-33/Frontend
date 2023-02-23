@@ -4,21 +4,11 @@ import Image from "next/image";
 import { useForm } from "react-hook-form";
 import Button from "../components/Button";
 import Input from "../components/Input";
+import Landing from "../components/Landing";
 import ProductCard from "../components/ProductCard";
 import ProductCardAuction from "../components/ProductCardAuction";
 
-export interface ISubmitData {
-  email: string;
-  password: string;
-}
-
 const Home: NextPage = () => {
-  const { register, handleSubmit } = useForm<ISubmitData>({});
-
-  const onSubmit = (data: any) => {
-    console.log(data);
-  };
-
   return (
     <div>
       <Head>
@@ -29,15 +19,7 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <Input
-          size={"big"}
-          labelFor={"Email"}
-          placeholder={"Email"}
-          type={"text"}
-          register={register}
-        />
-      </form>
+      <Landing />
     </div>
   );
 };
