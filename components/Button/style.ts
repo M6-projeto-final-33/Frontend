@@ -1,6 +1,8 @@
 import styled, { css } from "styled-components";
 
 interface IStyledButton {
+  width_mobile?: string;
+  width_desktop?: string;
   colorStyle?:
     | "grey-0__white-fixed"
     | "grey-1__white-fixed"
@@ -12,7 +14,6 @@ interface IStyledButton {
     | "brand-4__brand-1"
     | "grey-10__grey-1"
     | "transparent__grey-10"
-    | "grey-10__grey-1"
     | "grey-1__grey-10"
     | "grey-4__grey-0"
     | "grey-1__grey-10"
@@ -38,18 +39,22 @@ const StyledButton = styled.button<IStyledButton>`
   padding: 12px 20px;
   gap: 10px;
 
-  width: 119px;
+  width: ${(props) => props.width_mobile || "119px"};
   height: 38px;
 
   border-radius: 4px;
 
+  margin: 8px 0px 8px 8px;
+
   font: var(--button-medium-text);
 
   @media (min-width: 768px) {
-    width: 146px;
+    width: ${(props) => props.width_desktop || "146px"};
     height: 48px;
 
     padding: 12px 28px;
+
+    margin: 12px 0px 12px 12px;
 
     font: var(--button-big-text);
   }
@@ -155,17 +160,6 @@ const StyledButton = styled.button<IStyledButton>`
           background: none;
           border: none;
           color: var(--grey10);
-
-          &:hover {
-            background: var(--grey7);
-            border: 1.5px solid var(--grey7);
-          }
-        `;
-      case "grey-10__grey-1":
-        return css`
-          background: var(--grey10);
-          border: 1.5px solid var(--grey10);
-          color: var(--grey1);
 
           &:hover {
             background: var(--grey7);

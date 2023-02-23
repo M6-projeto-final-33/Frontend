@@ -3,6 +3,8 @@ import StyledButton from "./style";
 
 interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
+  width_mobile?: string;
+  width_desktop?: string;
   colorStyle?:
     | "grey-0__white-fixed"
     | "grey-1__white-fixed"
@@ -14,7 +16,6 @@ interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
     | "brand-4__brand-1"
     | "grey-10__grey-1"
     | "transparent__grey-10"
-    | "grey-10__grey-1"
     | "transparent__grey-0"
     | "grey-1__grey-10"
     | "grey-4__grey-0"
@@ -29,8 +30,19 @@ interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
     | "brand-3__brand-4";
 }
 
-const Button = ({ children, colorStyle, ...rest }: IButton) => (
-  <StyledButton colorStyle={colorStyle} {...rest}>
+const Button = ({
+  children,
+  colorStyle,
+  width_mobile,
+  width_desktop,
+  ...rest
+}: IButton) => (
+  <StyledButton
+    colorStyle={colorStyle}
+    width_mobile={width_mobile}
+    width_desktop={width_desktop}
+    {...rest}
+  >
     {children}
   </StyledButton>
 );

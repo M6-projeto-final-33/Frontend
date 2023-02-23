@@ -1,7 +1,8 @@
+import { LabelHTMLAttributes } from "react";
 import { Label } from "./style";
 import { UseFormRegister } from "react-hook-form";
 
-interface IProps {
+interface IProps extends LabelHTMLAttributes<HTMLLabelElement> {
   size: "small" | "big";
   labelFor: string;
   type: string;
@@ -15,9 +16,10 @@ const Input = ({
   type,
   placeholder,
   register,
+  ...rest
 }: IProps): JSX.Element => {
   return (
-    <Label htmlFor={labelFor} size={size}>
+    <Label htmlFor={labelFor} size={size} {...rest}>
       {labelFor}
       <input
         type={type}

@@ -1,16 +1,13 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import { useForm } from "react-hook-form";
+import Navbar from "../components/Navbar";
 import Button from "../components/Button";
-import Input from "../components/Input";
-import Landing from "../components/Landing";
-import ProductCard from "../components/ProductCard";
-import ProductCardAuction from "../components/ProductCardAuction";
+
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <>
       <Head>
         <title>Motors Shop</title>
         <meta
@@ -19,8 +16,7 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Landing />
-    </div>
+ </>
   );
 };
 
