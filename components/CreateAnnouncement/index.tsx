@@ -2,7 +2,8 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from "yup"
 import { useForm } from "react-hook-form"
 import { FieldValues } from "react-hook-form/dist/types"
-import { DefaultFormContainer, DefaultFormContent } from './styles'
+import { GrClose } from "react-icons/gr"
+import { DefaultFormBackground, DefaultFormContainer, DefaultFormContent } from './styles'
 import Input from '../Input'
 
 export interface IRequest {
@@ -38,12 +39,31 @@ const CreateAnnouncement = () => {
     }
 
     return (
-        <DefaultFormContainer>
-            <DefaultFormContent>
-                <Input size="small" labelFor="Tipo de anuncio" type="input" placeholder="Tipo" register={register} />
-                <Input size="small" labelFor="Tipo de anuncio" type="input" placeholder="Tipo" register={register} />
-            </DefaultFormContent>
-        </DefaultFormContainer>
+        <DefaultFormBackground>
+            <DefaultFormContainer>
+                <DefaultFormContent>
+                    <div className="top_container">
+                        <h2 className="form_title">Criar anuncio</h2>
+                        <GrClose className="close_icon" />
+                    </div>
+                    <div className="input_box ib_0">
+                        <h2 className="input_title">Tipo de anuncio</h2>
+                        <div className="options_container">
+                            <label className="option option_selected" htmlFor="venda">
+                                Venda
+                                <input id="venda" type="radio" name="type_ad" />
+                            </label>
+                            <label className="option" htmlFor="leilao">
+                                Leilão
+                                <input id="leilao" type="radio" name="type_ad" />
+                            </label>
+                        </div>
+                    </div>
+                    <h3 className="vehicle_info">Informações do veículo</h3>
+                    <Input size="small" labelFor="Título" type="input" placeholder="Digitar título" register={register} />
+                </DefaultFormContent>
+            </DefaultFormContainer>
+        </DefaultFormBackground>
     )
 }
 
