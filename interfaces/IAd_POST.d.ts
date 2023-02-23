@@ -1,11 +1,11 @@
 export interface IAd_POST {
-  typeAd: string;
+  typeAd: "sale" | "auction";
   title: string;
   year: string;
   mileage: string;
   price: number;
   description: string;
-  vehicleType: string;
+  vehicleType: "car" | "motorbike";
   coverImg: string;
   userId: string;
 }
