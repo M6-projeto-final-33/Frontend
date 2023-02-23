@@ -27,8 +27,8 @@ Caso altere a porta onde a API está funcionando vai precisa trocar tambémm a p
 
 #### Framework
 
-- REACT
 - NEXT
+- REACT
 
 #### Bibliotecas
 
