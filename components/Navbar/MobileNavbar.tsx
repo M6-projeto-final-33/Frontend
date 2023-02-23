@@ -83,7 +83,7 @@ const MobileNavbar = ({ isAuthenticated }: INavbar) => {
             <motion.li variants={linkVariants}>Leilão</motion.li>
           </Link>
           {isAuthenticated ? (
-            <UserIcon />
+            <UserIcon isNav />
           ) : (
             <div>
               <Link href="/login">

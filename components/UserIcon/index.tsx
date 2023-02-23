@@ -5,13 +5,17 @@ import { UserContext } from "../../contexts/UserContext";
 import Image from "next/image";
 import getUserInitials from "../../utils/getUserInitials";
 import transformUserName from "../../utils/transformUserName";
+import { IUser } from "../../interfaces/IUser";
 
-const UserIcon = () => {
+interface IUserIcon {
+  user?: IUser;
+  isNav?: boolean;
+}
+
+const UserIcon = ({ user, isNav }: IUserIcon) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
-
-  const { user } = useContext(UserContext);
 
   const variants = {
     open: { opacity: 1, x: 0 },
@@ -41,16 +45,18 @@ const UserIcon = () => {
             : transformUserName("nome usuário")}
         </span>
       </StyledUserIcon>
-      <motion.ul
-        className="user-dropDown"
-        animate={isOpen ? "open" : "closed"}
-        variants={variants}
-      >
-        <li>Editar perfil</li>
-        <li>Editar endereço</li>
-        <li>Minhas compras</li>
-        <li>Sair</li>
-      </motion.ul>
+      {isNav && (
+        <motion.ul
+          className="user-dropDown"
+          animate={isOpen ? "open" : "closed"}
+          variants={variants}
+        >
+          <li>Editar perfil</li>
+          <li>Editar endereço</li>
+          <li>Minhas compras</li>
+          <li>Sair</li>
+        </motion.ul>
+      )}
     </>
   );
 };

@@ -3,8 +3,6 @@ import Head from "next/head";
 import { useContext } from "react";
 import Button from "../components/Button";
 
-import Navbar from "../components/Navbar";
-import { ModalContext } from "../contexts/ModalContext";
 
 const Home: NextPage = () => {
   return (
@@ -17,6 +15,7 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <Navbar />
     </>
   );
