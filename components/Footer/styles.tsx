@@ -17,7 +17,7 @@ export const StyledFooter = styled.footer`
   strong {
     display: flex;
 
-    font-size: var(--body-2-400);
+    font: var(--body-2-400);
 
     color: var(--whiteFixed);
   }
