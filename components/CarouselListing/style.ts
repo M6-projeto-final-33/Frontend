@@ -3,12 +3,12 @@ import styled from "styled-components";
 export const StyledCarousel = styled.div`
   width: 100%;
   max-width: 90vw;
-  margin: 0 auto;
+  margin: 50px auto 0px auto;
 
   .title {
     font: var(--Heading-5-600);
     color: var(--grey0);
-    margin-top: 200px;
+    margin-bottom: 15px;
   }
 
   .content {
@@ -35,5 +35,16 @@ export const StyledCarousel = styled.div`
         }
       }
     }
+  }
+`;
+
+export const LinkPage = styled.div`
+  height: 55px;
+
+  @media (min-width: 425px) {
+    height: 50px;
+  }
+  @media (max-width: 1024px) {
+    padding-top: 40px;
   }
 `;
