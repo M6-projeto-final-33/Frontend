@@ -14,6 +14,8 @@ export const StyledFooter = styled.footer`
 
   padding: 0px 30px;
 
+  margin-top: 120px;
+
   strong {
     display: flex;
 
