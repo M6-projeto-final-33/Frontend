@@ -1,15 +1,21 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { useForm } from "react-hook-form";
-import Navbar from "../components/Navbar";
+import { useContext } from "react";
 import Button from "../components/Button";
 import CarouselListing from "../components/CarouselListing";
 import { advertisements } from "../database";
 import CreateAnnouncement from "../components/CreateAnnouncement";
 import Landing from "../components/Landing";
 import Footer from "../components/Footer";
+import CreateAnnouncement from "../components/CreateAnnouncement";
+import Modal from "../components/Modal";
+import Navbar from "../components/Navbar";
+import { ModalContext } from "../contexts/ModalContext";
+
 
 const Home: NextPage = () => {
+  const { setModal } = useContext(ModalContext);
+
   return (
     <>
       <Head>
@@ -20,7 +26,7 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <Modal title="Editar perfil" />
       <Navbar />
       <main>
         <Landing id="landing_section" />
