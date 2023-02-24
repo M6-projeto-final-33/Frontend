@@ -11,14 +11,14 @@ const DesktopNavbar = ({ isAuthenticated }: INavbar) => {
   return (
     <StyledNav>
       <StyledDesktopNav>
-        <Link href="/">
+        <Link href="#landing_section">
           <Image alt="brand logo" src={Logo} />
         </Link>
         <div className="navbar">
           <div className="pages">
-            <Link href="/carros">Carros</Link>
-            <Link href="/motos">Motos</Link>
-            <Link href="/leilao">Leilão</Link>
+            <Link href="#carros_section">Carros</Link>
+            <Link href="#motos_section">Motos</Link>
+            <Link href="#leilao_section">Leilão</Link>
           </div>
           {isAuthenticated ? (
             <div className="user">
