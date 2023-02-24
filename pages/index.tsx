@@ -4,14 +4,12 @@ import { useContext } from "react";
 import Button from "../components/Button";
 import CarouselListing from "../components/CarouselListing";
 import { advertisements } from "../database";
-import CreateAnnouncement from "../components/CreateAnnouncement";
 import Landing from "../components/Landing";
 import Footer from "../components/Footer";
 import CreateAnnouncement from "../components/CreateAnnouncement";
 import Modal from "../components/Modal";
 import Navbar from "../components/Navbar";
 import { ModalContext } from "../contexts/ModalContext";
-
 
 const Home: NextPage = () => {
   const { setModal } = useContext(ModalContext);
