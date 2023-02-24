@@ -9,11 +9,8 @@ import Footer from "../components/Footer";
 import CreateAnnouncement from "../components/CreateAnnouncement";
 import Modal from "../components/Modal";
 import Navbar from "../components/Navbar";
-import { ModalContext } from "../contexts/ModalContext";
 
 const Home: NextPage = () => {
-  const { setModal } = useContext(ModalContext);
-
   return (
     <>
       <Head>
@@ -24,7 +21,6 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Modal title="Editar perfil" />
       <Navbar />
       <main>
         <Landing id="landing_section" />
