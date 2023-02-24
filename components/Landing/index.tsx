@@ -1,12 +1,16 @@
 import Button from "../Button";
 import { Section } from "./style";
 
-const Landing = ({}): JSX.Element => {
+interface ILanding {
+  id?: string;
+}
+
+const Landing = ({ id }: ILanding): JSX.Element => {
   return (
-    <Section>
+    <Section id={id}>
       <div className="box description">
         <span className="main description">
-          Velocidade e experiência em um lugar feito para você Typography
+          Velocidade e experiência em um lugar feito para você
         </span>
         <span className="sub description">
           Um ambiente feito para você explorar o seu melhor

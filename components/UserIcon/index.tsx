@@ -10,9 +10,10 @@ import { IUser } from "../../interfaces/IUser";
 interface IUserIcon {
   user?: IUser;
   isNav?: boolean;
+  auction?: boolean;
 }
 
-const UserIcon = ({ user, isNav }: IUserIcon) => {
+const UserIcon = ({ user, isNav, auction }: IUserIcon) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -37,7 +38,7 @@ const UserIcon = ({ user, isNav }: IUserIcon) => {
   };
   return (
     <>
-      <StyledUserIcon>
+      <StyledUserIcon auction={auction}>
         {renderConditional()}
         <span onClick={toggleMenu}>
           {user

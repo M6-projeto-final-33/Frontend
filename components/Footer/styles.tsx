@@ -14,10 +14,12 @@ export const StyledFooter = styled.footer`
 
   padding: 0px 30px;
 
+  margin-top: 120px;
+
   strong {
     display: flex;
 
-    font-size: var(--body-2-400);
+    font: var(--body-2-400);
 
     color: var(--whiteFixed);
   }
