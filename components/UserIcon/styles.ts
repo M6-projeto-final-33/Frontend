@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const StyledUserIcon = styled.div`
+interface IStyledUserIcon {
+  auction?: boolean;
+}
+
+export const StyledUserIcon = styled.div<IStyledUserIcon>`
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -9,7 +13,8 @@ export const StyledUserIcon = styled.div`
 
   span {
     font: var(--body-2-500);
-    color: var(--grey2);
+
+    color: ${(props) => (props.auction ? "var(--whiteFixed)" : "var(--grey2)")};
 
     cursor: pointer;
     transition: 0.5s;

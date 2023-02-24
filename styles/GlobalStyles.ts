@@ -91,6 +91,6 @@ export default createGlobalStyle`
     }
 
     main {
-        margin-top: 90px;
+        margin-top: 80px;
     }
 `;

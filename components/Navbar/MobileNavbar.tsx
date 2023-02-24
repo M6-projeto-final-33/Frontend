@@ -49,7 +49,7 @@ const MobileNavbar = ({ isAuthenticated }: INavbar) => {
     <>
       <StyledNav>
         <StyledMobileNav>
-          <Link href="/">
+          <Link href="#landing_section">
             <Image alt="brand logo" src={Logo} />
           </Link>
           <div onClick={toggleMenu}>
@@ -73,13 +73,13 @@ const MobileNavbar = ({ isAuthenticated }: INavbar) => {
           animate={isOpen ? "opened" : "closed"}
           variants={variants}
         >
-          <Link href="/carros">
+          <Link href="#carros_section">
             <motion.li variants={linkVariants}>Carros</motion.li>
           </Link>
-          <Link href="/motos">
+          <Link href="#motos_section">
             <motion.li variants={linkVariants}>Motos</motion.li>
           </Link>
-          <Link href="/leilao">
+          <Link href="#leilao_section">
             <motion.li variants={linkVariants}>Leilão</motion.li>
           </Link>
           {isAuthenticated ? (

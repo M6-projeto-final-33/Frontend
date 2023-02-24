@@ -5,7 +5,8 @@ export const Section = styled.section`
   align-items: center;
 
   width: 100vw;
-  height: 100vh;
+  height: 50vh;
+  min-height: 450px;
 
   background-color: var(--brand2);
 
