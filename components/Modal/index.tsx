@@ -1,15 +1,12 @@
 import { Container, OverWindow } from "./style";
 import { RiCloseLine } from "react-icons/Ri";
 import Button from "../Button";
-import { Children, ReactNode, useContext } from "react";
+import { useContext } from "react";
 import { ModalContext } from "../../contexts/ModalContext";
 
-interface IProps {
-  title?: string;
-  children: ReactNode;
-}
+import ModalRequest, { IProps } from "./modalRequest";
 
-const Modal = ({ children, title }: IProps): JSX.Element => {
+const Modal = ({ title }: IProps): JSX.Element => {
   const { modal, setModal } = useContext(ModalContext);
 
   return (
@@ -23,7 +20,7 @@ const Modal = ({ children, title }: IProps): JSX.Element => {
                 <RiCloseLine className="modal icon-close" />
               </Button>
             </header>
-            {children}
+            <ModalRequest title={title} />
           </Container>
         </OverWindow>
       )}

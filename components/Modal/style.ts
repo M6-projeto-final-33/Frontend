@@ -8,12 +8,14 @@ export const OverWindow = styled.div`
   top: 0px;
   left: 0;
 
-  width: 100vw;
+  min-width: 100vw;
   height: 100vh;
 
   z-index: 99;
 
   background: rgba(0, 0, 0, 0.5);
+
+  overflow-y: scroll;
 `;
 
 export const Container = styled.div`
@@ -22,14 +24,14 @@ export const Container = styled.div`
   position: absolute;
 
   width: 90%;
-  max-height: 90%;
+
   padding: 10px;
   top: 50px;
 
   background: #ffffff;
   border-radius: 8px;
 
-  gap: 5px;
+  gap: 10px;
 
   .modal.header {
     display: flex;
@@ -42,10 +44,6 @@ export const Container = styled.div`
 
     width: 100%;
     height: 56px;
-
-    .title {
-      font: var(--Heading-7-500);
-    }
 
     .close {
       margin: 0;
@@ -66,12 +64,87 @@ export const Container = styled.div`
     }
   }
 
+  .title {
+    font: var(--Heading-7-500);
+  }
+
+  .subtitle {
+    font: var(--body-1-400);
+  }
+
   .container {
     height: 40px;
     background: red;
   }
 
+  .right {
+    color: var(--grey-2);
+
+    background: #dee2e6;
+
+    border: none;
+
+    :hover {
+      border: 0.5px solid #000;
+    }
+  }
+
+  .left {
+    justify-content: center;
+
+    width: 50%;
+
+    color: var(--alert1);
+
+    background: var(--alert2);
+    border: none;
+
+    padding: 0;
+
+    :hover {
+      border: 0.5px solid red;
+    }
+  }
+
+  //MODALS
+
+  // (DELETE)
+  .delete.select {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+
+    gap: 10px;
+  }
+
+  // (EDIT)
+  .edit.select {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+
+    gap: 10px;
+
+    .save {
+      background: var(--brand1);
+      color: var(--whiteFixed);
+      :hover {
+        border: 0.5px solid #b0a6f0;
+      }
+    }
+  }
   @media screen and (min-width: 560px) {
     width: 520px;
+
+    .delete.select {
+      justify-content: flex-end;
+      padding-left: 25%;
+
+      .select.delete {
+        min-width: 211px;
+      }
+    }
   }
 `;
