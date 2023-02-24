@@ -6,6 +6,7 @@ import Image from "next/image";
 import getUserInitials from "../../utils/getUserInitials";
 import transformUserName from "../../utils/transformUserName";
 import { IUser } from "../../interfaces/IUser";
+import { ModalContext } from "../../contexts/ModalContext";
 
 interface IUserIcon {
   user?: IUser;
@@ -17,6 +18,7 @@ const UserIcon = ({ user, isNav, auction }: IUserIcon) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
+  const { type, setModal, settype } = useContext(ModalContext);
 
   const variants = {
     open: { opacity: 1, x: 0 },
@@ -52,7 +54,14 @@ const UserIcon = ({ user, isNav, auction }: IUserIcon) => {
           animate={isOpen ? "open" : "closed"}
           variants={variants}
         >
-          <li>Editar perfil</li>
+          <li
+            onClick={() => {
+              setModal(true);
+              settype("Editar perfil");
+            }}
+          >
+            Editar perfil
+          </li>
           <li>Editar endereço</li>
           <li>Minhas compras</li>
           <li>Sair</li>

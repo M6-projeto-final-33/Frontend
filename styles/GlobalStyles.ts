@@ -93,4 +93,5 @@ export default createGlobalStyle`
     main {
         margin-top: 80px;
     }
+
 `;
