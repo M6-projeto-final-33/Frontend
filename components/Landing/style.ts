@@ -1,16 +1,20 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
+  box-sizing: border-box;
   display: flex;
   align-items: center;
+  justify-content: center;
 
-  width: 100vw;
-  height: 50vh;
+  width: 100%;
+  max-width: 100%;
+  height: 60vh;
   min-height: 450px;
 
-  background-color: var(--brand2);
+  background-color: var(--brand1);
 
   .box.description {
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,6 +28,7 @@ export const Section = styled.section`
 
     .description {
       color: var(--grey10);
+      max-width: 748px;
     }
 
     .main {
@@ -41,7 +46,7 @@ export const Section = styled.section`
 
       .select {
         width: 90vw;
-
+        margin-left: 0;
         border: 0.5px solid #fff;
       }
     }

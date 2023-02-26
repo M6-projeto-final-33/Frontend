@@ -22,9 +22,8 @@ const CarouselListing = ({
   const [width, setWidth] = useState(0);
 
   useEffect(() => {
-    carousel.current &&
-      setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-  }, []);
+    setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth);
+  });
 
   return (
     <>

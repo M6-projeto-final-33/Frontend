@@ -3,12 +3,16 @@ import { ProductCardContainer, ProductCardContent } from "./styles";
 import { IAd } from "../../interfaces/IAd";
 import transformCurrency from "../../utils/transformCurrency";
 import UserIcon from "../UserIcon";
+import { useState } from "react";
 
 export interface IProductCardProps {
   product: IAd;
 }
 
 const ProductCard = ({ product }: IProductCardProps) => {
+
+  const [isAnnouncementOwner, setIsAnnouncementOwner] = useState(false);
+
   const format = (title: string, maxLen: number) => {
     if (title.length > maxLen) {
       return title.substring(0, maxLen) + "...";
@@ -21,6 +25,21 @@ const ProductCard = ({ product }: IProductCardProps) => {
       <ProductCardContent>
         <div className="product_upper_info">
           <figure className="product_image_container">
+            {isAnnouncementOwner && (
+              <div className="active_container">
+                {
+                  product.isActive ?
+                    (
+                      <div className="active_content is_active">Ativo</div>
+                    )
+                    :
+                    (
+                      <div className="active_content no_active">Inativo</div>
+                    )
+                }
+              </div>
+            )}
+
             <Image
               className="product_image"
               src={product.coverImg}

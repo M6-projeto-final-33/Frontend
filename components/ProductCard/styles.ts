@@ -3,7 +3,6 @@ import { DefaultCard } from "../DefaultCard/styles";
 
 export const ProductCardContainer = styled.div`
   display: flex;
-  padding: 15px;
   width: 350px;
 `;
 
@@ -13,6 +12,7 @@ export const ProductCardContent = styled(DefaultCard)`
   justify-content: space-between;
 
   figure {
+    position: relative;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -22,6 +22,33 @@ export const ProductCardContent = styled(DefaultCard)`
     background-color: var(--grey7);
     margin-bottom: 16px;
     overflow: hidden;
+  }
+
+  .active_container {
+    position: absolute;
+    display: flex;
+    width: 330px;
+    height: 200px;
+    padding: 11px 16px;
+  }
+
+  .active_content {
+    position: relative;
+    display: flex;
+    height: fit-content;
+    padding: 2px 8px;
+  }
+
+  .is_active {
+    background-color: var(--brand1);
+    font: var(--body-2-500);
+    color: var(--whiteFixed);
+  }
+
+  .no_active {
+    background-color: var(--grey4);
+    font: var(--body-2-500);
+    color: var(--whiteFixed);
   }
 
   .product_image_container {
