@@ -4,6 +4,7 @@ import {
   createContext,
   useState,
   ReactNode,
+  useEffect,
 } from "react";
 import { ContextsProps } from "../interfaces/ContextsProps";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -30,12 +31,19 @@ interface IModalContext {
   errors: FieldErrors<IRequest>;
   register: UseFormRegister<IRequest>;
   handleSubmit: UseFormHandleSubmit<IRequest>;
+  type:
+    | "Sucesso!"
+    | "Conta criada com sucesso!"
+    | "Editar perfil"
+    | "Excluir anúncio";
+  settype: Dispatch<SetStateAction<string>>;
 }
 
 export const ModalContext = createContext<IModalContext>({} as IModalContext);
 
 const ModalProvider = ({ children }: ContextsProps) => {
   const [modal, setModal] = useState(false);
+  const [type, settype] = useState();
 
   // CreatAnnouncement
 
@@ -58,11 +66,19 @@ const ModalProvider = ({ children }: ContextsProps) => {
     resolver: yupResolver(formSchema),
   });
 
+  useEffect(() => {
+    modal
+      ? (document.querySelector("body").style.overflow = "hidden")
+      : (document.querySelector("body").style.overflow = "scroll");
+  }, [modal]);
+
   return (
     <ModalContext.Provider
       value={{
         modal,
         setModal,
+        type,
+        settype,
         register,
         handleSubmit,
         errors,

@@ -9,10 +9,12 @@ import Footer from "../components/Footer";
 import CreateAnnouncement from "../components/CreateAnnouncement";
 import Modal from "../components/Modal";
 import Navbar from "../components/Navbar";
+import { ModalContext } from "../contexts/ModalContext";
 import api from "../services/api";
 import { IAd } from "../interfaces/IAd";
 
 const Home: NextPage = () => {
+  const { type } = useContext(ModalContext);
 
   const [auctions, setAuctions] = useState<IAd[]>([])
   const [cars, setCars] = useState<IAd[]>([])
@@ -45,6 +47,7 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Modal title={type} />
       <Navbar />
       <main>
         <Landing id="landing_section" />
