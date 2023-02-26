@@ -35,6 +35,7 @@ export const advertisements: IAd[] = [
     description: "Corolla Cross completo semi-novo!",
     coverImg:
       "https://garagem360.com.br/wp-content/uploads/2021/09/10.-Toyota-Corolla-Cross-Hybrid-2022-2-1.jpg",
+    isActive: false,
     createdAt: new Date(),
     updatedAt: new Date(),
     user: user,
@@ -50,6 +51,7 @@ export const advertisements: IAd[] = [
     description: "Honda Civic completo semi-novo, já revisado!",
     coverImg:
       "https://1.bp.blogspot.com/-UqD0YRGPCYE/WMupyHlWTaI/AAAAAAACixA/r-IQa_03N8EFtZ0IM4HP4H44o3bW7xyawCLcB/s1600/Honda-Civic-Touring-2017%2B%252812%2529.jpg",
+    isActive: true,
     createdAt: new Date(),
     updatedAt: new Date(),
     user: user,
@@ -64,6 +66,7 @@ export const advertisements: IAd[] = [
     year: "2017",
     description: "Ford EcoSport semi-novo, já revisado!",
     coverImg: "https://img2.icarros.com/dbimg/galeriaimgmodelo/2/48072_1.jpg",
+    isActive: true,
     createdAt: new Date(),
     updatedAt: new Date(),
     user: user,
@@ -78,6 +81,7 @@ export const advertisements: IAd[] = [
     year: "2017",
     description: "Ford EcoSport semi-novo, já revisado!",
     coverImg: "https://img2.icarros.com/dbimg/galeriaimgmodelo/2/48072_1.jpg",
+    isActive: false,
     createdAt: new Date(),
     updatedAt: new Date(),
     user: user,
@@ -93,6 +97,7 @@ export const advertisements: IAd[] = [
     description: "Corolla Cross completo semi-novo!",
     coverImg:
       "https://garagem360.com.br/wp-content/uploads/2021/09/10.-Toyota-Corolla-Cross-Hybrid-2022-2-1.jpg",
+    isActive: true,
     createdAt: new Date(),
     updatedAt: new Date(),
     user: user,
@@ -108,6 +113,7 @@ export const advertisements: IAd[] = [
     description: "Honda Civic completo semi-novo, já revisado!",
     coverImg:
       "https://1.bp.blogspot.com/-UqD0YRGPCYE/WMupyHlWTaI/AAAAAAACixA/r-IQa_03N8EFtZ0IM4HP4H44o3bW7xyawCLcB/s1600/Honda-Civic-Touring-2017%2B%252812%2529.jpg",
+    isActive: false,
     createdAt: new Date(),
     updatedAt: new Date(),
     user: user,
@@ -122,6 +128,7 @@ export const advertisements: IAd[] = [
     year: "2017",
     description: "Ford EcoSport semi-novo, já revisado!",
     coverImg: "https://img2.icarros.com/dbimg/galeriaimgmodelo/2/48072_1.jpg",
+    isActive: true,
     createdAt: new Date(),
     updatedAt: new Date(),
     user: user,

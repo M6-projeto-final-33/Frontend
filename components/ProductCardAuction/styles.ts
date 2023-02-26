@@ -10,7 +10,6 @@ export const ProductCardAuctionContainer = styled.div`
   border-radius: 4px;
   background-image: url("../../assets/car1.png");
   overflow: hidden;
-  cursor: pointer;
 
   @media (min-width: 1000px) {
     width: 735px;

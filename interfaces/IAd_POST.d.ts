@@ -6,6 +6,7 @@ export interface IAd_POST {
   price: number;
   description: string;
   vehicleType: "car" | "motorbike";
+  isActive: boolean;
   coverImg: string;
   userId: string;
 }

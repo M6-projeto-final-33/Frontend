@@ -8,7 +8,7 @@ export const StyledCarousel = styled.div`
   .title {
     font: var(--Heading-5-600);
     color: var(--grey0);
-    margin-bottom: 15px;
+    margin-bottom: 60px;
   }
 
   .content {
@@ -17,6 +17,7 @@ export const StyledCarousel = styled.div`
     justify-content: center;
 
     .carousel {
+      width: 100%;
       cursor: grab;
       overflow: hidden;
 
@@ -24,14 +25,7 @@ export const StyledCarousel = styled.div`
         display: flex;
 
         .item {
-          min-height: 200px;
-          min-width: 400px;
-          padding: 14px;
-
-          > div {
-            width: 100%;
-            height: 90%;
-          }
+          padding-right: 24px;
         }
       }
     }

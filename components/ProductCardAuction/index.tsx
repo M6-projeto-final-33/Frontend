@@ -12,6 +12,7 @@ import Timer from "../../assets/time_icon.svg";
 import Set from "../../assets/seta_direita.svg";
 import { IProductCardProps } from "../ProductCard";
 import UserIcon from "../UserIcon";
+import transformCurrency from "../../utils/transformCurrency";
 
 const ProductCardAuction = ({ product }: IProductCardProps) => {
   return (
@@ -58,7 +59,7 @@ const ProductCardAuction = ({ product }: IProductCardProps) => {
               <h3 className="product_button">{product.year}</h3>
               <h3 className="product_button">{product.mileage} KM</h3>
             </div>
-            <h3 className="product_value">R$ {product.price}</h3>
+            <h3 className="product_value">{transformCurrency(product.price)}</h3>
           </div>
         </ProductCardAuctionContent1>
       </ProductCardAuctionContainer1>
