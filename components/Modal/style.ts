@@ -8,8 +8,10 @@ export const OverWindow = styled.div`
   top: 0px;
   left: 0;
 
+  padding: 40px;
+
   min-width: 100vw;
-  height: 100vh;
+  min-height: 100%;
 
   z-index: 99;
 
