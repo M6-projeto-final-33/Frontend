@@ -30,7 +30,7 @@ export default createGlobalStyle`
         --alert1: #CD2B31;
         --alert2: #FDD8D8;
         --alert3: #FFE5E5;
-        
+
         --success1: #18794E;
         --success2: #CCEBD7;
         --success3: #DDF3E4;
@@ -46,8 +46,8 @@ export default createGlobalStyle`
         --random9: #153D2E;
         --random10: #6100FF;
         --random11: #5700E3;
-        --random12: #30007D; 
-        
+        --random12: #30007D;
+
         --Heading-1-700: 700 44px/56px 'Lexend', sans-serif;
         --Heading-2-600: 600 36px/45px 'Lexend', sans-serif;
         --Heading-3-600: 600 32px/40px 'Lexend', sans-serif;

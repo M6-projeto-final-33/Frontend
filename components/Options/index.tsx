@@ -13,12 +13,12 @@ interface IOptionsProps {
     register?: UseFormRegister<any>
 }
 
-const Options = ({ options, fieldName, register }: IOptionsProps) => {
+const Options = ({ options, fieldName, register, ...rest }: IOptionsProps) => {
 
     const [selectedOption, setSelectecOption] = useState(0)
 
     return (
-        <OptionsContainer>
+        <OptionsContainer className="options">
             {options.map((option, index) => {
                 return (
                     <label key={index} className={selectedOption === index ? "option_selected" : ""} htmlFor={option.htmlFor}>

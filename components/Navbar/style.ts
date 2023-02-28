@@ -8,7 +8,7 @@ export const StyledNav = styled.div`
   left: 0%;
   z-index: 2;
 
-  width: 100vw;
+  width: 100%;
 
   img {
     cursor: pointer;
